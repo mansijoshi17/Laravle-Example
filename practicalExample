@@ -1,0 +1,32 @@
+<h1>Hello</h1>
+
+{{count($names)}}
+
+
+@if(count($names) !== 0)
+<h1>We have data!!</h1>
+@else
+<h1>No Data</h1>
+@endif
+
+@csrf
+
+@for($i=0;$i<=count($names);$i++)
+<h3>{{$i}}</h3>
+@endfor
+
+
+@foreach($names as $name)
+<h3>{{$name}}</h3>
+@endforeach
+
+
+@include("about")
+{{-- Call another view blade file --}}
+
+<script>
+
+    var data = @json($names);
+    console.log(data);
+
+</script>
