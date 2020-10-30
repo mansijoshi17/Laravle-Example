@@ -25,7 +25,7 @@ Route::get('/', function () {
 // });
 
 Route::view('addbook','book');
-Route::post('addbook',[BooksController::class,'insertData']);
+Route::post('addbook',[BooksController::class,'insertData']); //Form screen
 Route::get('list',[BookListController::class,'getData']);
 Route::get('delete/{id}',[BookListController::class,'delete']);
 Route::get('edit/{id}',[BookListController::class,'showData']);
